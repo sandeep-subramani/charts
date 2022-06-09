@@ -97,6 +97,7 @@ const _default_xAxis = {
   },
   plotLines: [],
   plotBands: [],
+  inverted: false
 };
 
 const _default_yAxis = _default_xAxis;
