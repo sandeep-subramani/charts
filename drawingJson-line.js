@@ -176,7 +176,7 @@ const _getScaleData = (seriesList, axis, axisId, axisType, isMutlipleAxis) => {
     ? "band"
     : "linear";
 
-  if (axis.categories && axis.categorconvertToLineDrawingJsonies.length) {
+  if (axis.categories && axis.categories.length) {
     return {
       type,
       domain: axis.categories,
