@@ -245,9 +245,9 @@ const _extractMajorLinePropsFromAxis = (axis, type) => {
 const _extractTitlePropsFromAxis = (axis, type) => {
   const { title = {} } = axis;
   if (type === "xAxis") {
-    return Object.assign({}, title, _default_xAxis_title);
+    return Object.assign({}, _default_xAxis_title, title);
   } else {
-    return Object.assign({}, title, _default_yAxis_title);
+    return Object.assign({}, _default_yAxis_title, title);
   }
 };
 
@@ -332,14 +332,14 @@ const _extractTickPropsFromAxis = (axis, type) => {
 const _extractPlotLinePropsFromAxis = (axis, type) => {
   const { plotLines = [] } = axis;
   return plotLines.map((plotLine) => {
-    return Object.assign({}, plotLine, _default_plotLineProps);
+    return Object.assign({}, _default_plotLineProps, plotLine);
   });
 };
 
 const _extractPlotBandPropsFromAxis = (axis, type) => {
   const { plotBands = [] } = axis;
   return plotBands.map((plotBand) => {
-    return Object.assign({}, plotBand, _default_plotBandProps);
+    return Object.assign({}, _default_plotBandProps, plotBand);
   });
 };
 
