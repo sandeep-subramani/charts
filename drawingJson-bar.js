@@ -355,17 +355,13 @@ export const convertToBarDrawingJson = ({ meta }) => {
   let { series = [], xAxis, yAxis } = meta;
 
   if (xAxis && xAxis.length) {
-    xAxis.forEach((elem, index) => {
-      xAxis[index] = Object.assign({}, _default_xAxis, elem);
-    });
+    xAxis = xAxis.map(axis => Object.assign({}, _default_xAxis, axis));
   } else {
     xAxis = [_default_xAxis];
   }
 
   if (yAxis && yAxis.length) {
-    yAxis.forEach((elem, index) => {
-      yAxis[index] = Object.assign({}, _default_yAxis, elem);
-    });
+    yAxis = yAxis.map(axis => Object.assign({}, _default_yAxis, axis));
   } else {
     yAxis = [_default_yAxis];
   }
